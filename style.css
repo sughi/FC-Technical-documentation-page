@@ -1,0 +1,129 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap");
+/* Fonts */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Reset */
+
+/* Variable color */
+:root {
+  --bg-color: #ffffff;
+  --black-color: #000000;
+  --texting-color: #4d4e53;
+}
+/* Variable color */
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+
+/* side navbar */
+#navbar {
+  width: 25vw;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+#navbar ul {
+  height: 88%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#navbar ul li {
+  width: 100%;
+  color: var(--texting-color);
+  list-style: none;
+  border-top: 1px solid;
+}
+#navbar ul li a {
+  display: block;
+  color: var(--texting-color);
+  cursor: pointer;
+  padding: 10px 30px;
+}
+#navbar header {
+  margin: 10px;
+}
+
+#navbar header h1 {
+  color: var(--black-color);
+  font-size: 1.8em;
+  text-align: center;
+}
+/* side navbar */
+#main-doc {
+  position: absolute;
+  width: 75vw;
+  left: 25vw;
+}
+
+/* Main Doc */
+#main-doc {
+  padding: 20px;
+}
+#main-doc .main-section header {
+  margin-bottom: 10px;
+}
+
+#main-doc .main-section article {
+  font-size: 0.96em;
+  color: var(--texting-color);
+}
+
+#main-doc .main-section p {
+  font-size: 0.96em;
+  margin-bottom: 20px;
+}
+
+#main-doc .main-section ul {
+  margin-left: 50px;
+}
+
+#main-doc .main-section article code {
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  line-height: 2;
+  border-radius: 5px;
+}
+#reference article ul li a {
+  text-decoration: underline;
+}
+
+/* Media Query */
+@media screen and (max-width: 800px) {
+  #navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 275px;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+  }
+  #navbar ul li {
+    border-top: none;
+    border-bottom: 2px solid;
+  }
+  #main-doc {
+    position: relative;
+    margin-top: 270px;
+    left: 0;
+    padding: 30px;
+    width: 100%;
+  }
+}
